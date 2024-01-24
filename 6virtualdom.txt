@@ -1,0 +1,9 @@
+Hello here we learn about virtual dom 
+Virtual Dom - if there is a variable a which is update every second then we have power that 
+              we direct reflect changes of third change rather than updating one by one
+
+Createroot()method - it's create tree of dom and compare it with browsers tree whenever the changes are done 
+                     it's only compare and change element which is updated .
+                     rendering or refreshing is easier with that.
+
+Documentation - https://github.com/acdlite/react-fiber-architecture
