@@ -18,11 +18,20 @@ function App() {
 
   const increase = ()=>{
     // console.log("Value added ", Math.random())
-    counter = counter+1;
+    // counter = counter+1;
     // console.log(counter)
     // setCounter(counter);
     if(counter<21){
-      setCounter7(counter);
+      /* if we want to increase in below manner it will not execute for all 4
+      because in reactjs instruction are goes in form of batches 
+      fiber detect it that all the task is same so why it's repeat unneccesary 
+      setCounter7(counter+1);
+      setCounter7(counter+1);
+      */
+    //  hence here we use callback approach where each line first execute than other 
+      setCounter7(PrevCounter => PrevCounter+1);
+      setCounter7(PrevCounter => PrevCounter+1);
+      setCounter7(PrevCounter => PrevCounter+1);
     }
     else{
       // message = "Value should no exeed 20";
