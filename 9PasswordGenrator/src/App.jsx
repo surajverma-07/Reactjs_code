@@ -1,5 +1,5 @@
 import { useState, useCallback ,useEffect , useRef} from "react";
-
+import './App.css'
 function App() {
   const [length, setLength] = useState(8);
   const [numallow, setNumAllow] = useState(false);
@@ -44,12 +44,12 @@ function App() {
 
   return (
     <>
-      <h1 className="text-4xl text-center text-white">Password Genrator</h1>
+      <h1 className="head text-center text-white">Password Genrator</h1>
       <div
-        className="w-full text-center max-w-md mx-auto h-12 rounded-lg px-4 my-8 shadow-md
+        className="w-full main text-center max-w-lg mx-auto h-20 rounded-lg px-4  shadow-md
                       text-orange-600 bg-gray-700"
       >
-        <div className="flex shadow rounded-lg overflow-hidden my-4">
+        <div className="flex inputcon shadow  overflow-hidden my-4">
           <input
             className="text-center outline-none w-full py-1 px-3"
             type="text"
@@ -60,7 +60,7 @@ function App() {
           />
           <button
                   onClick={CopyToClipboard}  
-                  className="ontline-none bg-blue-800 px-3 py-0.5 shrink-0">
+                  className="ontline-none cpbtn bg-blue-800 px-3 py-0.5 shrink-0">
                 
             copy
           </button>

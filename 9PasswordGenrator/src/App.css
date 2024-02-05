@@ -1,0 +1,18 @@
+.head{
+    font-size: 3.5rem;
+}
+.main{
+    margin-top: 10%;
+    width: 100%;
+}
+
+.inputcon{
+    padding-top: 7px;
+    font-size: 2rem;
+}
+.inputcon input{
+    background-color: black;
+}
+.cpbtn {
+    background-color: red;
+}
