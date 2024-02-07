@@ -95,7 +95,7 @@ function App() {
         </div>
          {/* <button className="bg-green-500 text-black gen"
                 onClick={hello()}>Genrate</button> */}
-      </div>
+      </div>  
     </>
   );
 }
