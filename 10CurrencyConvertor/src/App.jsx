@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { InputBox } from './components';
 import useCurrencyInfo from './hooks/useCurrencyInfo';
+import './App.css'
+
 
 function App() {
  const [amount,setAmount] = useState(true)
@@ -12,6 +14,7 @@ function App() {
 
  const options =  Object.keys(currencyInfo)
 
+ //swaping values
  const swap = () =>{
     setFrom(to)
     setTo(from)
@@ -31,6 +34,9 @@ function App() {
                 backgroundImage: `url('${BackgroundImage}')`,
             }}
         >
+            <div className='glow'>
+                Currency Converter
+            </div>
             <div className="w-full">
                 <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
                     <form
@@ -51,13 +57,7 @@ function App() {
                             />
                         </div>
                         <div className="relative w-full h-0.5">
-                            <button
-                                type="button"
-                                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
-                                onClick={swap}
-                            >
-                                swap
-                            </button>
+                          
                         </div>
                         <div className="w-full mt-1 mb-4">
                             <InputBox
@@ -70,9 +70,16 @@ function App() {
                                 
                             />
                         </div>
-                        <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+                        <button type="submit" className="w-80 bg-blue-600 text-white px-4 py-3 rounded-lg">
                             Convert {from.toUpperCase()} to {to.toUpperCase()}
                         </button>
+                        <button
+                                type="button"
+                                className=" border-2 border-hidden w-20 h-12  rounded-lg bg-blue-600 text-white px-2 py-0.5 ml-1"
+                                onClick={swap}
+                            >
+                                swap
+                            </button>
                     </form>
                 </div>
             </div>
