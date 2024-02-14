@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import mainimg from '../../assets/surajhomepage.png'
 
 export default function Home() {
     return (
@@ -23,8 +24,8 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
-                    <img className="w-96" src="https://i.ibb.co/5BCcDYB/Remote2.png" alt="image1" />
+                <div className="absolute  inset-0 w-full sm:my-20 sm:pt-1  h-full ">
+                    <img className="w-96" src={mainimg} alt="image1" />
                 </div>
             </aside>
 
