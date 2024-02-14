@@ -14,10 +14,11 @@ export default function Home() {
 
                         <Link
                             className="inline-flex text-white items-center px-6 py-3 font-medium bg-orange-700 rounded-lg hover:opacity-75"
-                            to="/"
+                            to="https://www.linkedin.com/in/suraj-kumar-verma-699b5a245/"
+                            target='_blank'
                         >
                             
-                         Download CV
+                          Hire Me
                         </Link>
                     </div>
                 </div>
