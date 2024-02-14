@@ -21,14 +21,19 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <Link to="/" className="hover:underline">
+                                    <NavLink to="/" className={({isActive})=>
+                                        `hover:underline
+                                        ${isActive?"text-orange-700":"text-gray-500"}`
+                                    }>
                                         Home
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/about" className="hover:underline">
+                                    <NavLink to="/about" className={({isActive})=>
+                                                  `hover:underline
+                                                  ${isActive?"text-orange-700":"text-gray-500"}`}>
                                         About
-                                    </Link>
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -78,9 +83,9 @@ export default function Footer() {
                 <div className="sm:flex sm:items-center m-0 p-0 bg-black w-full sm:justify-between">
                     <span className="text-sm text-white m-0 p-0 text-center w-full h-full">
                         © 2024
-                        <a href="https://cuwebdevsuraj.netlify.app/" target='_blank' className="hover:underline">
+                        <Link to="https://cuwebdevsuraj.netlify.app/" target='_blank' className="hover:underline">
                             SurajKumarVerma
-                        </a>
+                        </Link>
                         . All Rights Reserved.
                     </span>
                     
