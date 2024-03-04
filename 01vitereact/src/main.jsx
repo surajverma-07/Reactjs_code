@@ -10,19 +10,24 @@ function Myapp(){
       </div>
    );
 }
+
 // const ReactElement = {
 //    type:'a',
+
 //    probs:{
 //        href:'https://linkdin.com',
 //        target:'_blank',
 //        color1:'black'
 //    },
+
 //    word:" visit Linkdin (only for professionals )"
 // } 
+
 
 const anotherElement = (
    <a href='https://google.com' target='_blank'>Visit Google</a>
 )
+
 
 const anotheruser = "suraj aur vo"
 

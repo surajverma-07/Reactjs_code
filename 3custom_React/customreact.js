@@ -1,4 +1,3 @@
-
 // function customRender(reactElement,root1){
 //     const domElement = document.createElement(reactElement.type);
 //     domElement.innerHTML = reactElement.children;
@@ -42,5 +41,18 @@ const reactElement = {
     },
     word:" visit Linkdin (only for professionals )"
 }
+
+const reactElement1 = {
+    type: 'img',
+    probs:{
+        src:'../images/suraj.jpeg',
+        alt:'i am an image as a text'
+    }
+
+}
+
 const mainContainer = document.querySelector('#root')
  customRender(reactElement,mainContainer)
+
+ const container = document.getElementById('img')
+ customRender(reactElement1,container)

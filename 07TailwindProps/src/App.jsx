@@ -41,9 +41,11 @@ function App() {
       {/* <Card channel="chaiaurcode" myArr={nam :"chai"}/> */}
       {/* <Card channel="chaiaurcode" Obj = {myObj}/> */}
       {/* <Card obj1={myArr} /> */}
-      <Card username="Suraj Kumar Verma" btntxt="Explore more" />
-      <Card username="Dharana" btntxt="Commited message"/>
+      <Card username="Suraj Kumar Verma" btntxt="Explore more" text="Passionate Frontend web devloper 
+                                                                    Always spread happiness and being cool smart and honest"/>
+      <Card username="Dharana" btntxt="Commited message" text="Smart Girl doing her works with dedication her choice is very perfect"/>
       <Card username="us" />
+      <Card username="Vikas" btntxt='Badass' text='Har Har Mahadev'/>
 
     </>
   )

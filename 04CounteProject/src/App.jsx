@@ -4,14 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 //  We use hooks for updation in UI 
-var message='';
+// var message='';
 function App() {
   // const [count, setCount] = useState(0)
 
   // useState(true)
   // useState(hello())
   // useState('suraj')
-
+   let [message,setMessage] = useState('play the game')
   let [counter,setCounter7] = useState(10)
   // const [varname,methodname] = useState(default value)
   // let counter = 5;
@@ -21,7 +21,7 @@ function App() {
     // counter = counter+1;
     // console.log(counter)
     // setCounter(counter);
-    if(counter<21){
+    if(counter<20){
       /* if we want to increase in below manner it will not execute for all 4
       because in reactjs instruction are goes in form of batches 
       fiber detect it that all the task is same so why it's repeat unneccesary 
@@ -30,22 +30,24 @@ function App() {
       */
     //  hence here we use callback approach where each line first execute than other 
       setCounter7(PrevCounter => PrevCounter+1);
-      setCounter7(PrevCounter => PrevCounter+1);
-      setCounter7(PrevCounter => PrevCounter+1);
+      // setCounter7(PrevCounter => PrevCounter+1);
+      // setCounter7(PrevCounter => PrevCounter+1);
     }
     else{
       // message = "Value should no exeed 20";
-      alert("value shouldn't exeed from 20")
+       setMessage("value shouldn't be exceed from 20");
+       // alert("value shouldn't exeed from 20")
+      }
     }
-  }
-  function decrease(){
-    counter = counter-1;
-    if(counter>=0){
-      setCounter7(counter);
-    }
-    else{
-      // message = "Value should no exeed 20";
-      alert("value shouldn't less than 0")
+    function decrease(){
+      counter = counter-1;
+      if(counter>=0){
+        setCounter7(counter);
+      }
+      else{
+        setMessage("value shouldn't be less than 0");
+        // message = "Value should be greater than 0";
+      // alert("value shouldn't less than 0")
     }
   }
   return (
