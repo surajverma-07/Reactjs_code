@@ -10,6 +10,7 @@ function App() {
  const [to , setTo] = useState("usd")
  const [convertedAmount , setConvertedAmount] = useState(true) 
 
+//  custome hooks calling
  const currencyInfo = useCurrencyInfo(from)
 
  const options =  Object.keys(currencyInfo)
@@ -34,7 +35,7 @@ function App() {
                 backgroundImage: `url('${BackgroundImage}')`,
             }}
         >
-            <div className='glow'>
+            <div className='glow text-shadow '>
                 Currency Converter
             </div>
             <div className="w-full">
@@ -46,6 +47,7 @@ function App() {
                         }}
                     >
                         <div className="w-full mb-1">
+                            {/* Component Calling  */}
                             <InputBox
                                 label="From"
                                 amount={amount}
