@@ -3,7 +3,7 @@ import {Link,NavLink} from 'react-router-dom'
 import myImage from '../../assets/logo2.png';
 import cv from '../../assets/suraj.pdf'
 
-// Link tag instead of a tag because using a page will refresh
+// Link tag instead of a tag because using <a> page will refresh
 //   which is not supposed in react Js
 
 

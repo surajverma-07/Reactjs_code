@@ -25,7 +25,7 @@ export default function Home() {
                 </div>
 
                 <div className="absolute  inset-0 w-full sm:my-20 sm:pt-1  h-full ">
-                    <img className="w-96" src={mainimg} alt="image1" />
+                    <img className="w-96 bg-slate-100 rounded-lg" src={mainimg} alt="image1" />
                 </div>
             </aside>
 

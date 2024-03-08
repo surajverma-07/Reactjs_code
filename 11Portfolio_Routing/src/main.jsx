@@ -6,7 +6,6 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements } from 'r
 import { Home,About,Layout,Contact,Project } from './componentes/index.js'
 import User from './componentes/User/User.jsx'
 import Github, { githubInfoLoader } from './componentes/Github/Github.jsx'
-
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -32,23 +31,17 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element= {<Layout/>} >
        <Route path="" element={<Home/>} />
-       <Route path="about" element={<About/>} />
        <Route path="contact" element={<Contact/>} />
        <Route path="/user/:userid" element={<User/>} />
+       <Route path="about" element={<About/>} />
        <Route path='/project' element={< Project/>} />
 
        <Route 
              loader={githubInfoLoader}
                   path='github'
                   element={<Github/>} />
-
     </Route>
-    
   ),
-  // createRoutesFromElements(
-  //   <Route path='/project' element={< Project/>} />
-
-  //  )
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
