@@ -9,7 +9,7 @@ function Profile() {
     if(!user) return <div>Please Login</div>
 
     return <div>Welcome {user.username} 
-        Your Password is {user.password}
+        {/* Your Password is {user.password} */}
       </div>
   
 }
