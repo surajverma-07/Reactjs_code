@@ -3,7 +3,7 @@ import { useTodo } from '../context'
 
 function TodoForm() {
 
-    const [todo,setTodo] = useState(null)
+    const [todo,setTodo] = useState()
     const {add} = useTodo()
     const addTodo = (e) =>{
          e.preventDefault()

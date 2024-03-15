@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { TodoProvider } from './context'
+import TodoForm from './components/TodoForm'
+import TodoItem from './components/TodoItem'
 
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
       setTodos ((prev) => [{id:Date.now(),...todo},...prev] )
   }
   const update = (id,todo) =>{
-      setTodos ((prev) => prev.map((prevTodo)=>{prevTodo.id === id ? (todo):(prevTodo)}))
+      setTodos ((prev) => prev.map((prevTodo)=>(prevTodo.id === id ? (todo):(prevTodo))))
   }
   //filter create new array in below repeataidly add all previous array element in new array expect where id != id
   const deleteTodo = (id) =>{
@@ -36,9 +38,17 @@ function App() {
                     <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
                     <div className="mb-4">
                         {/* Todo form goes here */} 
+                        <TodoForm />
                     </div>
                     <div className="flex flex-wrap gap-y-3">
                         {/*Loop and Add TodoItem here */}
+                        {todos.map((todo) => (
+                          <div key={todo.id}
+                          className='w-full'
+                          >
+                            <TodoItem todo={todo} />
+                          </div>
+                        ))}
                     </div>
                 </div>
             </div>
