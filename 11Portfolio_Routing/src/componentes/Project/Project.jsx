@@ -9,9 +9,8 @@ import project4 from '../../assets/password.png'
 
 function Project() {
   return (
-    <>
-     <h1 className='text-5xl text-center mt-4  font-semibold'>Project</h1>
-    <div className='flex flex-wrap justify-between mx-28 m-14 gap-y-20 '>
+    <div className='bg-[#EFECEC]'>
+    <div className='flex flex-wrap justify-between mx-20 p-14  gap-y-20 '>
       
       <Card image={project1} Heading="Manage To Do"  weblink='https://settodos.netlify.app/' text='SetTodos is a user-friendly todo management website built with the power of ReactJS, Tailwind CSS, HTML, and JavaScript. This intuitive platform empowers users to effortlessly organize their tasks by providing essential features such as adding, updating, deleting, and toggling todos.' />
       <Card image={project2} Heading='Personal Portfolio' weblink='https://cuwebdevsuraj.netlify.app/' text='
@@ -21,7 +20,7 @@ The Portfolio Showcase, a dynamic site, is a collaborative effort between me and
       <Card image={food} Heading='Food Delivery Website' weblink="https://surajverma-07.github.io/fooddeliveryportfolio/" text='A food delivery website, crafted solely with HTML and CSS, offers a simple UI. Users navigate effortlessly, exploring menus and placing orders. Though lacking a backend, it provides a seamless experience for browsing and selecting meals.'/>
       <Card image={gym} Heading='Gym Portfolio' weblink="https://surajverma-07.github.io/gym-website/" text='My first project: a gym portfolio website crafted using HTML and CSS. Featuring a simple UI, it showcases gym services and includes a user-friendly form for entering details.'/>
     </div>
-    </>
+    </div>
   )
 }
 

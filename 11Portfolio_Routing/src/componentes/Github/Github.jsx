@@ -14,7 +14,7 @@ function Github() {
 //      },[])   
     return (
     <>
-    <div className='text-center m-5 flex flex-col items-center gap-y-2 my-10 text-black text-3xl'>
+    <div className='text-center  flex flex-col items-center gap-y-2 py-12  text-3xl bg-[#EFECEC] text-[#0C2D57]'>
         <div>  {data.name} </div>
       <div> Github Followers : {data.followers} </div>
       

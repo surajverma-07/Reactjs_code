@@ -4,16 +4,17 @@ import mainimg from '../../assets/surajhomepage.png'
 
 export default function Home() {
     return (
-        <div className="mx-auto w-full max-w-7xl my-16">
+        <div className="mx-auto w-full h-full  bg-[#EFECEC]">
 
-            <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
+            <aside className="relative overflow-hidden text-[#0C2D57] rounded-lg sm:mx-16 mx-2 py-16 md:py-32">
+
                 <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
                     <div className="max-w-xl sm:mt-1 mt-80 space-y-4 text-center sm:ml-auto">
                         <h2 className="lg:text-6xl font-semibold text-5xl">
                             Suraj Kumar Verma 
                         </h2>
                         <span className="hidden sm:block text-3xl">Frontend Web Devloper</span>
-                        <p class="font-light">Translating ideas into dynamic and user-friendly websites</p>
+                        <p class="text-black">Translating ideas into dynamic and user-friendly websites</p>
                         <Link
                             className="inline-flex text-white items-center  justify-center text-xl py-2 font-medium bg-orange-700 rounded-lg hover:opacity-75 px-10 text-center"
                             to="https://www.linkedin.com/in/suraj-kumar-verma-699b5a245/"
@@ -24,9 +25,8 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-
-                <div className="absolute  inset-0 w-full sm:my-20 sm:pt-1  h-full ">
-                    <img className="w-96 bg-slate-100 rounded-lg" src={mainimg} alt="image1" />
+                <div className="absolute  inset-0 w-full sm:my-20  sm:pt-1  h-full ">
+                    <img className="w-[28rem] -mt-20" src={mainimg} alt="image1" />
                 </div>
             </aside>
 {/* upper portion ends */}
