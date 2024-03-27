@@ -14,11 +14,11 @@ function Github() {
 //      },[])   
     return (
     <>
-    <div className='text-center m-5 bg-gray-600 text-white text-3xl'>
-        <div> Name : {data.name} </div>
+    <div className='text-center m-5 flex flex-col items-center gap-y-2 my-10 text-black text-3xl'>
+        <div>  {data.name} </div>
       <div> Github Followers : {data.followers} </div>
       
-        <img className='align-center' src={data.avatar_url} alt="Git Picture" width={300} />
+        <img className='' src={data.avatar_url} alt="Git Picture" width={300} />
     </div>
 
         </>

@@ -16,9 +16,9 @@ export default function Footer() {
                             />
                         </Link>
                     </div>
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div className="flex gap-10 ">
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
+                            <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <NavLink to="/" className={({isActive})=>
@@ -37,9 +37,11 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
-                            <ul className="text-gray-500 font-medium">
+                        <div className='  w-96'>
+                            <h2 className="mb-6 text-md  text-center  font-semibold text-gray-900  uppercase">Follow us</h2>
+                            <div className='flex justify-evenly'>
+                               <div>
+                              <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a
                                         href="https://github.com/surajverma-07"
@@ -49,9 +51,9 @@ export default function Footer() {
                                     >
                                         Github
                                     </a>
-                                </li>
-                                <li>
-                                <a
+                                 </li>
+                                 <li>
+                                 <a
                                         href="https://www.instagram.com/surajverma_00_7/"
                                         className="hover:underline"
                                         target="_blank"
@@ -61,22 +63,34 @@ export default function Footer() {
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
-                            <ul className="text-gray-500 font-medium">
+                               </div>
+                               <div>
+                              <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <Link to="#" className="hover:underline">
-                                        Privacy Policy
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="#" className="hover:underline">
-                                        Terms &amp; Conditions
-                                    </Link>
+                                    <a
+                                        href="https://www.linkedin.com/in/suraj-kumar-verma-699b5a245/"
+                                        className="hover:underline"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        Linkdin
+                                    </a>
+                                 </li>
+                                 <li>
+                                 <a
+                                        href="https://leetcode.com/surajverma_00_7/"
+                                        className="hover:underline"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        Leetcode
+                                    </a>
                                 </li>
                             </ul>
+                               </div>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
