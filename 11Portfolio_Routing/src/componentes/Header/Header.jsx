@@ -49,7 +49,9 @@ export default function Header() {
                             Download CV
                         </a>
 
+                    <div className=' -mr-20 pl-10'>
                         <ThemeBtn />
+                    </div>
 
                     </div>
                     {/* Middle or menu Protion -> home , about....  */}

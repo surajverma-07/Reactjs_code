@@ -10,7 +10,7 @@ export default function Home() {
 
             <aside className="relative overflow-hidden text-[#0C2D57] rounded-lg sm:mx-16 mx-2 py-16 md:py-32">
 
-                <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
+                <div className="relative z-10 max-w-screen-xl px-4 md:-mt-10 pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
                     <div className="max-w-xl sm:mt-1 mt-80 space-y-4 text-center sm:ml-auto">
                         <h2 className="lg:text-6xl font-semibold text-5xl">
                             Suraj Kumar Verma 
@@ -28,7 +28,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="absolute  inset-0 w-full sm:my-20  sm:pt-1  h-full ">
-                    <img className="w-[28rem] -mt-20" src={mainimg} alt="image1" />
+                    <img className="w-[27rem] md:-mt-24" src={mainimg} alt="image1" />
                 </div>
             </aside>
 {/* upper portion ends */}
