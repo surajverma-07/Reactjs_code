@@ -3,7 +3,7 @@ import React from 'react'
 function Card({image,Heading="website" , weblink="#",text="ye h hamari website "}){
 
     return(
-        <div className="w-[350px]  rounded-lg border shadow-md  hover:bg-[#FC6736] hover:scale-105  group  ">
+        <div className="w-[350px]  rounded-lg border shadow-md  hover:bg-[#FC6736] hover:scale-105  group dark:bg-blue-950  ">
         <img
           src={image}
           alt="Laptop"
@@ -11,7 +11,7 @@ function Card({image,Heading="website" , weblink="#",text="ye h hamari website "
         />
         <div className="py-3 text-center ">
           <h1 className="text-3xl text-[#0C2D57] font-semibold">{Heading}</h1>
-          <p className="mt-3 text-md text-gray-800 px-4 group-hover:text-[#EFECEC]">
+          <p className="mt-3 text-md text-gray-800 px-4 group-hover:text-[#EFECEC] dark:text-orange-500">
                  {text}
           </p>
           <button

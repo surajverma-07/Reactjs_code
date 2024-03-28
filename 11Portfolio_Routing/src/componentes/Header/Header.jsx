@@ -2,15 +2,33 @@ import React from 'react'
 import {Link,NavLink} from 'react-router-dom'
 import myImage from '../../assets/logo2.png';
 import cv from '../../assets/suraj.pdf'
+import { ThemeProvider } from '../../Context/Context';
+import ThemeBtn from '../ThemeBtn/ThemeBtn';
+import { useEffect , useState } from 'react';
 
 // Link tag instead of a tag because using <a> page will refresh
 //   which is not supposed in react Js
 
 
 export default function Header() {
+    const [themeMode,setThemeMode] = useState("light")
+    
+      const lightTheme = () =>{
+         setThemeMode("light")
+      }
+      const darkTheme = () =>{
+        setThemeMode("dark")
+      }
+    
+      //actual change in theme 
+      useEffect(()=>{
+          document.querySelector('html').classList.remove("light","dark")
+          document.querySelector('html').classList.add(themeMode)
+      },[themeMode])
     return (
+        <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
         <header className="shadow sticky z-50 top-0  ">
-            <nav className=" border-[#EFECEC] shadow-md px-4 lg:px-6  py-2.5 bg-white">
+            <nav className=" border-[#EFECEC] shadow-md px-4 lg:px-6  py-2.5 bg-white dark:bg-black dark:text-white">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     {/* logo portion  */}
                     <Link to="/" className="flex items-center">
@@ -30,6 +48,9 @@ export default function Header() {
                         >
                             Download CV
                         </a>
+
+                        <ThemeBtn />
+
                     </div>
                     {/* Middle or menu Protion -> home , about....  */}
                     <div
@@ -94,6 +115,7 @@ export default function Header() {
                 </div>
             </nav>
         </header>
+        </ThemeProvider>
     );
 }
   

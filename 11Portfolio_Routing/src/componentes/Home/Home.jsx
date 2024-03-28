@@ -6,7 +6,7 @@ import mainimg from '../../assets/surajhomepage.png'
 
 export default function Home() {
     return (
-        <div className="mx-auto w-full h-full  bg-[#EFECEC]">
+        <div className="mx-auto w-full h-full  bg-[#EFECEC] dark:bg-[#0C2D57] dark:text-white">
 
             <aside className="relative overflow-hidden text-[#0C2D57] rounded-lg sm:mx-16 mx-2 py-16 md:py-32">
 
