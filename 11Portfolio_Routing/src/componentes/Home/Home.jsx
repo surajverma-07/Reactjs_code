@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import mainimg from '../../assets/surajhomepage.png'
 
+// https://colorhunt.co/palette/000000323232ff1e56ffac41
+
 export default function Home() {
     return (
         <div className="mx-auto w-full h-full  bg-[#EFECEC]">
