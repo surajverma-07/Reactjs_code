@@ -2,13 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import mainimg from '../../assets/surajhomepage.png'
 
-// https://colorhunt.co/palette/000000323232ff1e56ffac41
 
 export default function Home() {
     return (
-        <div className="mx-auto w-full h-full  bg-[#EFECEC] dark:bg-[#0C2D57] dark:text-white">
+        <div className="mx-auto w-full h-full  bg-[#EFECEC] dark:bg-[#444444]">
 
-            <aside className="relative overflow-hidden text-[#0C2D57] rounded-lg sm:mx-16 mx-2 py-16 md:py-32">
+            <aside className="relative overflow-hidden text-[#0C2D57] dark:text-[#EDEDED] rounded-lg sm:mx-16 mx-2 py-16 md:py-32">
 
                 <div className="relative z-10 max-w-screen-xl px-4 md:-mt-10 pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
                     <div className="max-w-xl sm:mt-1 mt-80 space-y-4 text-center sm:ml-auto">
@@ -16,9 +15,9 @@ export default function Home() {
                             Suraj Kumar Verma 
                         </h2>
                         <span className="hidden sm:block text-3xl">Frontend Web Devloper</span>
-                        <p class="text-black">Translating ideas into dynamic and user-friendly websites</p>
+                        <p class="text-black leading-6 drop-shadow-xl ">Translating ideas into dynamic and user-friendly websites</p>
                         <Link
-                            className="inline-flex text-white items-center  justify-center text-xl py-2 font-medium bg-orange-700 rounded-lg hover:opacity-75 px-10 text-center"
+                            className="inline-flex text-white items-center  justify-center text-xl py-2 font-medium dark:bg-[#DA0037]  bg-orange-700 rounded-lg hover:opacity-75 px-10 text-center"
                             to="https://www.linkedin.com/in/suraj-kumar-verma-699b5a245/"
                             target='_blank'
                         >

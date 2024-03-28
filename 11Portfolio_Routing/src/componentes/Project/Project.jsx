@@ -9,7 +9,7 @@ import project4 from '../../assets/password.png'
 
 function Project() {
   return (
-    <div className='bg-[#EFECEC]'>
+    <div className='bg-[#EFECEC] dark:bg-[#444444]'>
     <div className='flex flex-wrap justify-between mx-20 p-14  gap-y-20 -mt-4'>
       
       <Card image={project1} Heading="Manage To Do"  weblink='https://settodos.netlify.app/' text='SetTodos is a user-friendly todo management website built with the power of ReactJS, Tailwind CSS, HTML, and JavaScript. This intuitive platform empowers users to effortlessly organize their tasks by providing essential features such as adding, updating, deleting, and toggling todos.' />

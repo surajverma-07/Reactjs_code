@@ -4,7 +4,7 @@ import logo from '../../assets/logo2.png'
 
 export default function Footer() {
     return (
-        <footer className="bg-text border-y ">
+        <footer className="dark:bg-[#171717] border-y ">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
@@ -23,7 +23,7 @@ export default function Footer() {
                                 <li className="mb-4">
                                     <NavLink to="/" className={({isActive})=>
                                         `hover:underline
-                                        ${isActive?"text-orange-700":"text-[#0C2D57]"}`
+                                        ${isActive?"text-orange-700":"text-[#0C2D57]"} ${isActive ? "dark:text-[#DA0037]" : "dark:text-[#EDEDED]"}  dark:hover:text-[#DA0037]`
                                     }>
                                         Home
                                     </NavLink>
@@ -31,7 +31,7 @@ export default function Footer() {
                                 <li>
                                     <NavLink to="/about" className={({isActive})=>
                                                   `hover:underline
-                                                  ${isActive?"text-orange-700":"text-[#0C2D57]"}`}>
+                                                  ${isActive?"text-orange-700":"text-[#0C2D57]"} ${isActive ? "dark:text-[#DA0037]" : "dark:text-[#EDEDED]"}  dark:hover:text-[#DA0037]`}>
                                         About
                                     </NavLink>
                                 </li>
@@ -41,7 +41,7 @@ export default function Footer() {
                             <h2 className="mb-6 text-md  text-center  font-semibold text-[#FC6736]  uppercase">Follow us</h2>
                             <div className='flex justify-evenly'>
                                <div>
-                              <ul className="text-[#0C2D57] font-medium">
+                              <ul className="text-[#0C2D57] dark:text-[#EDEDED] font-medium">
                                 <li className="mb-4">
                                     <a
                                         href="https://github.com/surajverma-07"
@@ -65,7 +65,7 @@ export default function Footer() {
                             </ul>
                                </div>
                                <div>
-                              <ul className="text-[#0C2D57] font-medium">
+                              <ul className="text-[#0C2D57] dark:text-[#EDEDED] font-medium">
                                 <li className="mb-4">
                                     <a
                                         href="https://www.linkedin.com/in/suraj-kumar-verma-699b5a245/"
