@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import cocf from './conf/conf';
-
+import conf from './conf/conf'
 function App() {
   const [count, setCount] = useState(0)
-  console.log({appwriteurl});
+  console.log(conf.appwriteUrl);
   return (
     <>
       <h1>Suraj Blog's</h1>
