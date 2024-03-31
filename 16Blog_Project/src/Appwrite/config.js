@@ -6,7 +6,7 @@ export class Service {
 
     client = new Client();
     database;
-    bucket;
+    bucket;//storage
 
     constructor(){
         this.client 
@@ -101,7 +101,7 @@ export class Service {
     // file upload service
     async uploadFile(file){
         try {
-            return await this.bucket.createFile(
+            return await this.bucket.createFile(              
                 conf.appwriteBucketId,
                 ID.unique(),
                 file
