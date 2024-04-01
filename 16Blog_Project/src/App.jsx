@@ -27,11 +27,12 @@ function App() {
   },[])
   
  return (!loading) ? (
- <div className='min-h-screen bg-gray-400 text-white flex flex-wrap  content-between  '> 
-     <div className="block w-full">
+ <div className='min-h-screen bg-gray-400   flex flex-wrap  content-between  '> 
+     <div className="block w-full text-center font-bold">
        <Header />
           <main>
              {/* <Outlet /> */}
+             App 
           </main>
        <Footer />
      </div>
