@@ -9,6 +9,7 @@ function LogoutBtn() {
         authService.logout().then(()=>{
             dispatch(logout())
         })
+        .catch((error)=>console.log("LogoutBtn :: error in loging out :: ",error));
     }
 
   return (

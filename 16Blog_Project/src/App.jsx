@@ -37,7 +37,7 @@ function App() {
        <Footer />
      </div>
  </div>
- ) : null 
+ ) : (<div className='bg-gray-400 text-xl'>You are loged out</div>)
 }
 
 export default App
