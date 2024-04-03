@@ -28,38 +28,38 @@ export default function Header() {
     return (
         <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
         <header className="shadow sticky z-50 top-0  ">
-            <nav className=" border-[#EFECEC] shadow-md px-4 lg:px-6  py-2.5 bg-white dark:bg-[#171717] ">
-                <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <nav className=" border-[#EFECEC] shadow-md px-4 lg:px-6 py-1 md:py-2.5 bg-white dark:bg-[#171717] ">
+                <div className="flex flex-wrap justify-between items-center mx-auto xl:max-w-screen-xl max-w-screen-lg">
                     {/* logo portion  */}
                     <Link to="/" className="flex items-center">
                         <img
                             src={myImage}
-                            className="h-16"
+                            className="h-16 "
                             alt="Logo"
                         />
                     </Link>
                     {/* Rightmost Portion  */}
-                    <div className="flex items-center lg:order-2">
+                    <div className="flex items-center order-2">
                        
                         <a
                            href={cv}
                             download={cv}
-                            className="text-white bg-orange-700 dark:bg-[#DA0037] hover:opacity-90 hover:scale-105  focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                            className="text-white bg-orange-700 dark:bg-[#DA0037] hover:opacity-90 hover:scale-105  focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none md:scale-90 sm:scale-75 lg:scale-95"
                         >
                             Download CV
                         </a>
 
-                    <div className=' -mr-20 pl-10'>
+                    <div className=' lg:pl-14 lg:right-14 xl:pl-0 xl:-mr-20 relative xl:right-0'>
                         <ThemeBtn />
                     </div>
 
                     </div>
                     {/* Middle or menu Protion -> home , about....  */}
                     <div
-                        className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1 "
-                        id="mobile-menu-2"
+                        className="border justify-between flex items-center lg:flex lg:w-auto order-1 "
+                        id=""
                     >
-                        <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 text-xl ">
+                        <ul className="flex text-lg  font-medium flex-row space-x-0  lg:space-x-8 mt-0 lg:text-xl ">
                             <li>
                                 <NavLink
                                     to= "/"
