@@ -3,12 +3,15 @@ import { PostCard,Container } from '../components'
 import appwriteService from '../Appwrite/config'
 function AllPosts() {
     const [posts, setPosts] = useState([])
-    useEffect(()=>{},[])
-       appwriteService.getPost([]).then((posts)=>{
-         if(posts){
-            setPosts(posts.douments)
-         }
-       }) 
+    useEffect(()=>{
+        appwriteService.getPosts([]).then((posts)=>{
+            if(posts){
+               setPosts(posts.documents)
+            }
+          }) 
+    },[])
+ 
+ if (posts != null){
 
   return (
     <div className='w-full py-8'>
@@ -24,6 +27,9 @@ function AllPosts() {
       
     </div>
   )
+}else{
+    return <div className='py-10'>No Post Availavle</div>
+}
 }
 
 export default AllPosts

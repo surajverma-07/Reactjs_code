@@ -5,7 +5,7 @@ import appwriteService from '../../Appwrite/config'
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-export default function PostForm(post){
+export default function PostForm({post}){
 
     const {register,handleSubmit,watch,setValue,control,getValues } = useForm({
         defaultValues:{
@@ -56,9 +56,10 @@ export default function PostForm(post){
             // setValue('slug', slug)
             // return slug;
             return value
-            .trim()
-            .toLowerCase()
-            .replace(/^[a-zA-Z\d]+/g,'-')//some change
+                .trim()
+                .toLowerCase()
+                .replace(/[^a-zA-Z\d\s]+/g, "-")
+                .replace(/\s/g, "-");
         }
         else{
             return "";
@@ -114,15 +115,15 @@ export default function PostForm(post){
                     />
                 </div>
             )}
-            <Select
-                options={["active", "inactive"]}
-                label="Status"
-                className="mb-4"
-                {...register("status", { required: true })}
-            />
-            <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
-                {post ? "Update" : "Submit"}
-            </Button>
+             <Select
+                    options={["active", "inactive"]}
+                    label="Status"
+                    className="mb-4"
+                    {...register("status", { required: true })}
+                />
+                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                    {post ? "Update" : "Submit"}
+                </Button>
         </div>
     </form>
     )
