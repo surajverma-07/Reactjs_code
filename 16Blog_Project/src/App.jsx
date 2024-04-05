@@ -1,6 +1,5 @@
 import React, { useState , useEffect  } from 'react'
 import {useDispatch} from 'react-redux'
-import conf from './conf/conf'
 import './App.css'
 import authService from './Appwrite/auth'
 import { login, logout } from './store/authSlice'
@@ -26,13 +25,12 @@ function App() {
     })
   },[])
   
- return (!loading) ? (
+ return !loading ? (
  <div className='min-h-screen bg-gray-400   flex flex-wrap  content-between  '> 
      <div className="block w-full text-center font-bold">
        <Header />
           <main>
-             {/* <Outlet /> */}
-             App 
+             <Outlet />
           </main>
        <Footer />
      </div>

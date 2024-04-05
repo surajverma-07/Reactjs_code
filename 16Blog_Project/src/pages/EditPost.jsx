@@ -4,7 +4,7 @@ import appwriteService from '../Appwrite/config'
 import {useParams,useNavigate} from 'react-router-dom'
 
 function EditPost() {
-    const [post ,Setpost] = useState([])
+    const [post ,setPost] = useState(null)
     const {slug} = useParams()
     const navigate = useNavigate() 
 
@@ -12,7 +12,7 @@ function EditPost() {
         if(slug){
             appwriteService.getPost(slug).then((post) =>{
                 if(post){
-                    Setpost(post)
+                    setPost(post)
                 }
             })
         }

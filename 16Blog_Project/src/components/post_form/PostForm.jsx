@@ -1,28 +1,27 @@
 import React,{useCallback, useEffect} from "react";
-import {set, useForm } from "react-hook-form";
-import {Button ,Select , Input,RTE} from '../index'
+import {useForm } from "react-hook-form";
+import {Button ,Select , Input,RTE} from '..'
 import appwriteService from '../../Appwrite/config'
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { AppwriteException } from "appwrite";
 
-function PostForm(post){
+export default function PostForm(post){
 
     const {register,handleSubmit,watch,setValue,control,getValues } = useForm({
         defaultValues:{
             title: post?.title || '',
-            slug: post?.slug || '',
+            slug: post?.$id || '',
             content: post?.content || '',
             status:post?.status || 'active',
         },
     })
 
-    const navigate = useNavigate()
-    const userData = useSelector(state => state.user.userData)
+    const navigate = useNavigate();
+    const userData = useSelector((state) => state.auth.userData);
 
     const submit = async (data) =>{
         if(post){
-            const file = data.image[0] ? appwriteService.uploadFile(data.image[0]) :null
+            const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) :null;
             if(file){
                 appwriteService.deleteFile(post.featuredImage)
             }
@@ -35,7 +34,7 @@ function PostForm(post){
             }
         }
         else{
-          const file = data.image[0]? appwriteService.uploadFile(data.image[0]):null
+          const file = await appwriteService.uploadFile(data.image[0]);
 
           if(file){
             const fileId = file.$id
@@ -56,24 +55,26 @@ function PostForm(post){
             // const slug = value.toLowerCase().replace(/ /g,'-')
             // setValue('slug', slug)
             // return slug;
-            return value.trim().toLowerCase().replace(/^[a-zA-Z\d]+/g,'-')//some change
+            return value
+            .trim()
+            .toLowerCase()
+            .replace(/^[a-zA-Z\d]+/g,'-')//some change
         }
         else{
-            return ''
+            return "";
         }
     },[])
     // This method will watch specified inputs and return their values. It is useful to render input value and for determining what to render by condition.
      useEffect(()=>{
         const subscription = watch((value , {name})=>{
             if(name==='title'){
-                setValue('slug',slugTransform(value.title,{shouldValidate:true}))
+                setValue('slug',slugTransform(value.title),{shouldValidate:true});
             }
         })
 
 
-        return () =>{
-            subscription.unsubscribe()
-        }
+        return () => subscription.unsubscribe()
+        
      },[watch,slugTransform,setValue])
 
     return(
@@ -127,4 +128,3 @@ function PostForm(post){
     )
 }
 
-export default PostForm

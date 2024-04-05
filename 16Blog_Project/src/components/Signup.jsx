@@ -5,25 +5,26 @@ import { Button, Input, Logo } from "./index";
 import authService from "../Appwrite/auth";
 import { useForm } from "react-hook-form";
 import { login } from "../store/authSlice";
+
 function Signup() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const [error, SetError] = useState("");
 
-  const signup = async (data) => {
+  const create = async (data) => {
     SetError("");
     try {
       const userData = await authService.createAccount(data);
       if (userData) {
-        const userdata = await authService.getCurrentUser();
-        if (userdata) dispatch(login(userdata));
+        const userData = await authService.getCurrentUser();
+        if (userData) dispatch(login(userData));
         navigate("/");
       }
     } catch (error) {
       SetError(error.message);
     }
-  };
+  }
 
   return (
     <div className="flex items-center justify-center">
@@ -49,7 +50,7 @@ function Signup() {
         </p>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
-        <form onSubmit={handleSubmit(signup)}>
+        <form onSubmit={handleSubmit(create)}>
           <div className="space-y-5">
             <Input
               label="Full Name: "
@@ -65,11 +66,9 @@ function Signup() {
               {...register("email", {
                 required: true,
                 validate: {
-                  matchPatern: (value) =>
-                    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
-                      value
-                    ) || "Email address must be a valid address",
-                },
+                  matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                  "Email address must be a valid address",
+              }
               })}
             />
             <Input
@@ -88,7 +87,7 @@ function Signup() {
         </form>
       </div>
     </div>
-  );
+  )
 }
 
 export default Signup;

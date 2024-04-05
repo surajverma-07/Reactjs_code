@@ -47,7 +47,7 @@ export class Service {
                 title,
                 content,
                 featuredImage,
-                status
+                status,
             }
 
         )
