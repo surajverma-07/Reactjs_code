@@ -1,12 +1,13 @@
 import React,{useCallback, useEffect} from "react";
-import { UseForm, set, useForm } from "react-hook-form";
+import {set, useForm } from "react-hook-form";
 import {Button ,Select , Input,RTE} from '../index'
 import appwriteService from '../../Appwrite/config'
 import { useNavigate } from "react-router-dom";
-import { UseSelector, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { AppwriteException } from "appwrite";
 
 function PostForm(post){
+
     const {register,handleSubmit,watch,setValue,control,getValues } = useForm({
         defaultValues:{
             title: post?.title || '',
@@ -15,6 +16,7 @@ function PostForm(post){
             status:post?.status || 'active',
         },
     })
+
     const navigate = useNavigate()
     const userData = useSelector(state => state.user.userData)
 
@@ -48,6 +50,7 @@ function PostForm(post){
           }
         }
     }
+
     const slugTransform = useCallback((value) =>{
         if(value && typeof value === 'string'){
             // const slug = value.toLowerCase().replace(/ /g,'-')
@@ -59,6 +62,7 @@ function PostForm(post){
             return ''
         }
     },[])
+    // This method will watch specified inputs and return their values. It is useful to render input value and for determining what to render by condition.
      useEffect(()=>{
         const subscription = watch((value , {name})=>{
             if(name==='title'){
@@ -74,7 +78,7 @@ function PostForm(post){
 
     return(
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-        <div className="w-2/3 px-2">
+         <div className="w-2/3 px-2">
             <Input
                 label="Title :"
                 placeholder="Title"
@@ -91,7 +95,7 @@ function PostForm(post){
                 }}
             />
             <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
-        </div>
+         </div>
         <div className="w-1/3 px-2">
             <Input
                 label="Featured Image :"
