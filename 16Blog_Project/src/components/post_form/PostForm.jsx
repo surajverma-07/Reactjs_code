@@ -20,6 +20,7 @@ export default function PostForm({post}){
     const userData = useSelector((state) => state.auth.userData);
 
     const submit = async (data) =>{
+        // if post available means - Updation
         if(post){
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) :null;
             if(file){
@@ -33,6 +34,7 @@ export default function PostForm({post}){
               navigate(`/post/${dbPost.$id}`)      
             }
         }
+        // add new post 
         else{
           const file = await appwriteService.uploadFile(data.image[0]);
 
@@ -103,7 +105,7 @@ export default function PostForm({post}){
                 label="Featured Image :"
                 type="file"
                 className="mb-4"
-                accept="image/png, image/jpg, image/jpeg, image/gif"
+                accept="image/png, image/jpg, image/jpeg, image/gif "
                 {...register("image", { required: !post })}
             />
             {post && (
