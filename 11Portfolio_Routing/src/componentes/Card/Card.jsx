@@ -3,13 +3,13 @@ import React from 'react'
 function Card({image,Heading="website" , weblink="#",text="ye h hamari website "}){
 
     return(
-        <div className="w-[350px]  rounded-lg border shadow-md  hover:bg-[#FC6736] hover:scale-105  group dark:bg-[#171717]  ">
+        <div className="md:w-[350px] w-full m-5  rounded-lg border shadow-md  hover:bg-[#FC6736] hover:scale-105  group dark:bg-[#171717]  ">
         <img
           src={image}
           alt="Laptop"
           className="h-[250px] w-full  object-fit rounded-lg"
         />
-        <div className="py-3 text-center ">
+        <div className="py-3 text-center w-full ">
           <h1 className="text-3xl text-[#0C2D57] font-semibold dark:text-[#DA0037]">{Heading}</h1>
           <p className="mt-3 text-md text-gray-800 px-4 dark:text-[#EDEDED] group-hover:text-[#EFECEC] ">
                  {text}
