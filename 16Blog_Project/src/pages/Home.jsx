@@ -18,7 +18,7 @@ if(isUserAuthenticated){
     
     return(
         <div className="w-full py-8">
-            Welcome To My Blog 
+            Welcome To Student Project Manager 
         </div>
     )
 }
@@ -29,7 +29,7 @@ else{
              <div className="flex flex-wrap">
                 <div className="p-2 w-full">
                     <h1 className="text-2xl font-bold hover:text-gray-500">
-                        Login To Read Posts
+                        Login To See Projects 
                     </h1>
                 </div>
              </div>
