@@ -7,30 +7,30 @@ export default function Home() {
     return (
         <div className="mx-auto w-full h-full  bg-[#EFECEC] dark:bg-[#444444]">
 
-            <aside className="relative overflow-hidden text-[#0C2D57] dark:text-[#EDEDED] rounded-lg sm:mx-16 mx-2 py-16 md:py-32">
+            <aside className="overflow-hidden flex-wrap md:w-full md:justify-center md:items-center flex text-[#0C2D57] dark:text-[#EDEDED] rounded-lg">
+                <div className=" ">
+                    <img className="h-96 w-80 m-0 p-0 " src={mainimg} alt="image1" />
+                </div> 
 
-                <div className="relative z-10 max-w-screen-xl px-4 md:-mt-10 pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
-                    <div className="max-w-xl sm:mt-1 mt-80 space-y-4 text-center sm:ml-auto">
-                        <h2 className="lg:text-6xl font-semibold text-5xl">
-                            Suraj Kumar Verma 
+                <div className="  flex items-center justify-center flex-col gap-3 h-72 ">
+                    
+                        <h2 className="text-3xl">
+                            Suraj Kumar Verma
                         </h2>
-                        <span className="hidden sm:block text-3xl">Frontend Web Devloper</span>
-                        <p class="text-black leading-6 drop-shadow-xl ">Translating ideas into dynamic and user-friendly websites</p>
+                    <span className="text-xl p-2">Frontend Web Devloper</span>
+                    <p class=" text-xl p-2 text-center">Translating ideas into dynamic and user-friendly websites</p>
                         <Link
                             className="inline-flex text-white items-center  justify-center text-xl py-2 font-medium dark:bg-[#DA0037]  bg-orange-700 rounded-lg hover:opacity-75 px-10 text-center"
                             to="https://www.linkedin.com/in/suraj-kumar-verma-699b5a245/"
                             target='_blank'
                         >
-                            
-                          Hire Me
+                            Hire Me
                         </Link>
-                    </div>
+                
                 </div>
-                <div className="absolute  inset-0 w-full sm:my-20  sm:pt-1  h-full ">
-                    <img className="w-[27rem] md:-mt-24" src={mainimg} alt="image1" />
-                </div>
+             
             </aside>
-{/* upper portion ends */}
+            {/* upper portion ends */}
 
             {/* <div className="grid  place-items-center sm:mt-20">
                 <img className="sm:w-96 w-48" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />

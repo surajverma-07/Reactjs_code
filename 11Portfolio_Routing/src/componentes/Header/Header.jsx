@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
       <header className="shadow sticky z-50 top-0">
-        <nav className="border-[#EFECEC] shadow-md px-4 lg:px-6 py-1 md:py-2.5 bg-white dark:bg-[#171717]">
+        <nav className="border-[#EFECEC] shadow-md px-4 lg:px-6  py-1 md:py-2.5 bg-white dark:bg-[#171717]">
           <div className="flex flex-wrap justify-between items-center mx-auto xl:max-w-screen-xl max-w-screen-lg">
             {/* Logo */}
             <Link to="/" className="flex items-center">
@@ -53,7 +53,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             <div
-              className="lg:hidden flex flex-col w-full lg:w-auto overflow-hidden"
+              className="flex flex-col w-full lg:w-auto overflow-hidden" // Removed lg:hidden from here
               id="mobile-menu"
             >
               <ul className="flex flex-col lg:flex-row w-full lg:w-auto lg:ml-auto mt-4 lg:mt-0">
@@ -107,16 +107,16 @@ export default function Header() {
             </div>
 
             {/* Download CV Button and Theme Button */}
-            <div className="flex items-center w-full order-2">
+            <div className="flex items-center  order-2">
               <a
                 href={cv}
                 download={cv}
-                className="text-white bg-orange-700 dark:bg-[#DA0037] hover:opacity-90 hover:scale-105 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-md md:px-4 px-2  py-2 lg:py-2.5 mr-2 focus:outline-none md:scale-90 sm:scale-75 lg:scale-95"
+                className="text-white bg-orange-700 dark:bg-[#DA0037] hover:opacity-90 hover:scale-105 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-md md:px-4 p-2 text-sm text-center mt-2 lg:py-2.5 mr-2 focus:outline-none md:scale-90 sm:scale-75 lg:scale-95"
               >
                 Download CVV
               </a>
 
-              <div className="flex ml-4 h-10 rounded  mb-2">
+              <div className="flex ml-3 h-10 rounded  mb-2">
                 <ThemeBtn />
               </div>
             </div>
