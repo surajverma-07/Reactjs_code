@@ -14,8 +14,8 @@ export default function ThemeBtn() {
      }
 
     return (
-        <label className="flex flex-col justify-center items-center gap-y-2 ">
-          <span className="ml-3 text-md font-medium text-[#0C2D57] dark:text-[#EDEDED]">{(themeMode==="dark")?"Enable light":"Enable dark"}</span>
+        <label className="flex  justify-center gap-2 items-center  ">
+          <span className="ml-3 text-s font-medium text-[#0C2D57] dark:text-[#EDEDED]">{(themeMode==="dark")?"Enable light":"Enable dark"}</span>
           <div className="relative inline-flex  items-center cursor-pointer ">
             
              <input
