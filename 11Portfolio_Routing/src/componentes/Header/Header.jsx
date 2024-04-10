@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import myImage from "../../assets/logo2.png";
-import cv from "../../assets/suraj.pdf";
+import cv from "../../assets/SurajResume.pdf";
 import { ThemeProvider } from "../../Context/Context";
 import ThemeBtn from "../ThemeBtn/ThemeBtn";
 
