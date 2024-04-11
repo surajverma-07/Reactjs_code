@@ -6,6 +6,9 @@ const app = express();
 //   res.send("server is ready ");
 // });
 
+//use is a middleware 
+app.use(express.static('dist'));
+
 //list of jokes 
 app.get('/api/songs',(req,res)=>{
    const songs = [
