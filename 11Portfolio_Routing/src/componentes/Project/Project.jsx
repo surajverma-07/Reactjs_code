@@ -3,7 +3,6 @@ import Card from '../Card/Card';
 import project1 from '../../assets/todo.png';
 import project2 from '../../assets/project4.png';
 import project3 from '../../assets/project3.png';
-import gym from '../../assets/project1.png';
 import food from '../../assets/project2.png';
 import project4 from '../../assets/password.png';
 import spm from '../../assets/spm.png'
