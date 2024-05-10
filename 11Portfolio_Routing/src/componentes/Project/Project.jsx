@@ -11,7 +11,7 @@ import spm from '../../assets/spm.png'
 function Project() {
   return (
     <div className='bg-[#EFECEC] dark:bg-[#444444]'>
-      <div className='flex flex-wrap w-full m-0 p-0  items-center justify-center text-center mt-4'>
+      <div className='flex flex-wrap w-full m-0 p-0  items-center justify-center text-center py-5'>
 
         <Card className='w-full' image={spm} Heading="Student Project Manager" weblink='https://studentprojectmanager.netlify.app/' text='A student project management website enables authenticated students to submit project details, including screenshots, synopsis, and presentations. It facilitates project tracking for students and assessment for teachers, allowing students to add, update, and delete their projects while viewing all submissions.' />
         <Card className='w-full' image={project1} Heading="Manage To Do" weblink='https://settodos.netlify.app/' text='SetTodos is a user-friendly todo management website built with the power of ReactJS, Tailwind CSS, HTML, and JavaScript. This intuitive platform empowers users to effortlessly organize their tasks by providing essential features such as adding, updating, deleting, and toggling todos.' />
