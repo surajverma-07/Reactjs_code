@@ -8,8 +8,8 @@ export default function Home() {
         <div className="mx-auto w-full h-full  bg-[#EFECEC] dark:bg-[#444444]">
 
             <aside className="overflow-hidden flex-wrap md:w-full md:justify-center md:items-center flex text-[#0C2D57] dark:text-[#EDEDED] rounded-lg">
-                <div className="mt-20 mb-2 ">
-                    <img className="h-80 w-80 -m-0 p-0  " src={mainimg} alt="image1" />
+                <div className="sm:mt-20 sm:mb-2 m-auto">
+                    <img className="h-80 w-80 sm:-m-0 sm:p-0  m-auto" src={mainimg} alt="image1" />
                 </div> 
 
                 <div className="  flex items-center justify-center flex-col gap-3 h-72 ">

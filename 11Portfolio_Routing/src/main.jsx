@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements } from 'r
 import { Home,About,Layout,Contact,Project } from './componentes/index.js'
 import User from './componentes/User/User.jsx'
 import Github, { githubInfoLoader } from './componentes/Github/Github.jsx'
+import Layout1 from './componentes/Layout1.jsx'
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -27,22 +28,52 @@ import Github, { githubInfoLoader } from './componentes/Github/Github.jsx'
 //   }
 // ])
 
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/" element= {<Layout/>} >
+//        <Route path="" element={<Home/>} />
+//        <Route path="/contact" element={<Contact/>} />
+//        <Route path="/user/:userid" element={<User/>} />
+//        <Route path="/about" element={<About/>} />
+//        <Route path='/project' element={< Project/>} />
+       
+//        <Route 
+//              loader={githubInfoLoader}
+//                   path='/github'
+//                   element={<Github/>} />
+//     </Route>
+//   ),
+// )
+const routesWithHeaderandFooter = (
+  <Route path="/" element={<Layout />}>
+    <Route path="" element={<Home />} />
+    <Route path="/contact" element={<Contact />} />
+    <Route path="/user/:userid" element={<User/>} />
+  </Route>
+);
+
+// Define routes without Layout
+const routesWithHeaderOnly = (
+  <Route path="/" element={<Layout1 />}>
+    <Route path="/project" element={<Project />} />
+    <Route path="/about" element={<About />} />
+    <Route
+      loader={githubInfoLoader}
+      path='/github'
+      element={<Github/>}
+    />
+  </Route>
+ 
+);
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element= {<Layout/>} >
-       <Route path="" element={<Home/>} />
-       <Route path="contact" element={<Contact/>} />
-       <Route path="/user/:userid" element={<User/>} />
-       <Route path="about" element={<About/>} />
-       <Route path='/project' element={< Project/>} />
-
-       <Route 
-             loader={githubInfoLoader}
-                  path='github'
-                  element={<Github/>} />
-    </Route>
-  ),
-)
+    <>
+      {routesWithHeaderandFooter}
+      {routesWithHeaderOnly}
+    </>
+  )
+);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
