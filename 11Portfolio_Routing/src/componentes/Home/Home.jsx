@@ -17,7 +17,7 @@ export default function Home() {
                         <h2 className="text-3xl">
                             Suraj Kumar Verma
                         </h2>
-                    <span className="text-xl p-2">Frontend Web Devloper</span>
+                    <span className="text-xl p-2">MERN Stack Web Devloper</span>
                     <p class=" text-xl p-2 text-center">Translating ideas into dynamic and user-friendly websites</p>
                         <Link
                             className="inline-flex text-white items-center  justify-center text-xl py-2 font-medium dark:bg-[#DA0037]  bg-orange-700 rounded-lg hover:opacity-75 px-10 text-center"

@@ -15,10 +15,10 @@ export default function About() {
       <div className="about-right flex flex-col md:flex-row text-center justify-evenly w-full md:w-[60vw] shadow-lg mx-auto rounded-lg py-4">
         <div className="frontend hover:scale-110 group w-full md:w-[25vw] shadow-md rounded-lg p-4 bg-[#0C2D57] text-[#EFECEC] hover:text-[#FC6736] dark:hover:text-[#DA0037] mt-4 md:mt-0">
           <h3 className="text-2xl font-medium dark:text-[#DA0037] dark:group-hover:text-[#EDEDED]">Frontend Web Development</h3>
-          <div className="mt-2 text-lg">React JS</div>
+          <div className="text-lg">Express JS</div>
+          <div className=" text-lg">React JS</div>
           <div className="text-lg">JavaScript</div>
-          <div className="text-lg">CSS</div>
-          <div className="text-lg">HTML</div>
+          <div className="text-lg">Mongo DB</div>
         </div>
 
         <div className="shadow-md rounded-lg p-4 hover:scale-110 w-full md:w-[25vw] bg-[#0C2D57] text-[#EFECEC] hover:text-[#FC6736] dark:hover:text-[#DA0037] group mt-4 md:mt-0">
