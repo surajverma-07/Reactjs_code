@@ -60,8 +60,7 @@ export default function Header() {
                 <li>
                   <NavLink
                     to="/"
-                    activeClassName="text-orange-700 dark:text-[#DA0037]"
-                    className="block py-2 px-4 text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037]"
+                    className={({isActive})=>`block py-2 px-4 ${isActive ? "text-orange-700" : "text-[#0C2D57]"} text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037] `}
                     exact
                   >
                     Home
@@ -70,8 +69,7 @@ export default function Header() {
                 <li>
                   <NavLink
                     to="/about"
-                    activeClassName="text-orange-700 dark:text-[#DA0037]"
-                    className="block py-2 px-4 text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037]"
+                    className={({isActive})=>`block py-2 px-4 ${isActive ? "text-orange-700" : "text-[#0C2D57]"} text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037] `}
                   >
                     About
                   </NavLink>
@@ -79,8 +77,7 @@ export default function Header() {
                 <li>
                   <NavLink
                     to="/project"
-                    activeClassName="text-orange-700 dark:text-[#DA0037]"
-                    className="block py-2 px-4 text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037]"
+                    className={({isActive})=>`block py-2 px-4 ${isActive ? "text-orange-700" : "text-[#0C2D57]"} text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037] `}
                   >
                     Projects
                   </NavLink>
@@ -88,8 +85,7 @@ export default function Header() {
                 <li>
                   <NavLink
                     to="/contact"
-                    activeClassName="text-orange-700 dark:text-[#DA0037]"
-                    className="block py-2 px-4 text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037]"
+                    className={({isActive})=>`block py-2 px-4 ${isActive ? "text-orange-700" : "text-[#0C2D57]"} text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037] `}
                   >
                     Contact Us
                   </NavLink>
@@ -97,8 +93,7 @@ export default function Header() {
                 <li>
                   <NavLink
                     to="/github"
-                    activeClassName="text-orange-700 dark:text-[#DA0037]"
-                    className="block py-2 px-4 text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037]"
+                    className={({isActive})=>`block py-2 px-4 ${isActive ? "text-orange-700" : "text-[#0C2D57]"} text-[#0C2D57] dark:text-[#EDEDED] hover:text-orange-700 dark:hover:text-[#DA0037] `}
                   >
                     Github
                   </NavLink>

@@ -10,6 +10,10 @@ function App() {
       <Love />
       <h1>hello {username}</h1>
       <p>test pera </p>
+      <pre>
+        <h2>Notes</h2>
+        <p></p>
+      </pre>
       </>
   )
 }

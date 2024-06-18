@@ -1,7 +1,7 @@
 function Love_DS(){
     return(
         <>
-        <h1>Suraj loves me == i love suraj</h1>
+        <h1>JAY SHREE RAM </h1>
         </>
     )
 }
