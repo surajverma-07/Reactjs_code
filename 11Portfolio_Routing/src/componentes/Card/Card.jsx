@@ -11,7 +11,7 @@ function Card({image,Heading="website" , weblink="#",text="ye h hamari website "
         />
         <div className="py-3 text-center w-full ">
           <h1 className="text-2xl text-[#0C2D57] font-semibold dark:text-[#DA0037]">{Heading}</h1>
-          <p className="mt-3 text-md text-gray-800 px-4 dark:text-[#EDEDED] group-hover:text-[#EFECEC] ">
+          <p className="mt-3 text-[12px] text-gray-800 px-4 dark:text-[#EDEDED] group-hover:text-[#EFECEC] ">
                  {text}
           </p>
           <button
