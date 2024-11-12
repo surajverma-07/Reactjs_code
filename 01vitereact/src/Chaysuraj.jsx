@@ -1,6 +1,6 @@
 function Love(){
     return(
-        <h2>one day i complete my all the dreams geting my dream life , spread happiness in the world with my faimly mummy papa sakshi dada and my loved one</h2>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio impedit quis perspiciatis blanditiis esse, vel minima fugiat laboriosam doloremque placeat praesentium laborum hic numquam magnam unde expedita ut ex suscipit.</h2>
 
     )
     
